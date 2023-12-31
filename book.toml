@@ -1,0 +1,6 @@
+[book]
+authors = ["Christian Fosli"]
+language = "en"
+multilingual = false
+src = "src"
+title = "My notes"
