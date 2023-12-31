@@ -1,5 +1,7 @@
 # Notes
 
+[![Deploy mdBook to GH Pages](https://github.com/christianfosli/notes/actions/workflows/mdbook.yml/badge.svg)](https://github.com/christianfosli/notes/actions/workflows/mdbook.yml)
+
 I keep some notes here,
 mostly development related things, as well as "quick ref"-guides on Linux commands and similar things.
 
