@@ -16,6 +16,8 @@
 
 - [Microsoft 365](./msft-365.md)
 
+- [Python](./python.md)
+
 - [Vim \& Helix](./vim-helix.md)
 
 - [Web](./web.md)
