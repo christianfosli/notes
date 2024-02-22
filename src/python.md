@@ -23,7 +23,18 @@
 
 * [More info about venv's](https://realpython.com/python-virtual-environments-a-primer/)
 
+## Pip upgrades
+
+1. Update version constraints in requirements.txt
+
+2.
+
+  ```sh
+  pip install --upgrade -r requirements.txt
+  ```
 
 ## Convenient cli's
 
 * Generate a uuid: `python -m uuid`
+
+* Serve static files in current directory: `python -m http.server 8000`
