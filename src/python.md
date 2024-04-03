@@ -2,8 +2,8 @@
 
 ## Managing multiple python versions and dependencies
 
-* Install multiple python versions with dnf:
-  [developer.fedoraproject.org/tech/languages/python/multiple-pythons](https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html)
+* Install multiple python versions with system package manager (e.g. dnf:
+  [developer.fedoraproject.org/tech/languages/python/multiple-pythons](https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html))
 
 * Use venv to separate project dependencies from system python dependencies:
 
