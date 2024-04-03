@@ -132,3 +132,15 @@
 * See boot order `sudo efibootmgr`
 
 * Boot next `sudo efibootmgr --bootnext XXXX`
+
+### Configure systemd-resolved to not use azure private endpoints
+
+* Create file /etc/systemd/resolved.conf.d/az_blob_pub.conf with the following content
+
+  ```ini
+  # Work around missconfigured peerings from on-prem networks to azure blob storage private endpoints
+  # by forcing DNS to a public DNS server (in this case cloudflare DNS)
+  [Resolve]
+  DNS=1.1.1.1 2606:4700:4700::1111
+  Domains=~blob.core.windows.net
+  ```
