@@ -38,3 +38,9 @@
 * Generate a uuid: `python -m uuid`
 
 * Serve static files in current directory: `python -m http.server 8000`
+
+## Logging in pytest output
+
+```bash
+pytest -o log_cli=true --log-cli-level=DEBUG
+```
