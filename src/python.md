@@ -42,5 +42,22 @@
 ## Logging in pytest output
 
 ```bash
-pytest -o log_cli=true --log-cli-level=DEBUG
+pytest -o log_cli=true --log-level=DEBUG
 ```
+
+or persistant in a config file, which by convention resides in the root directory of the repository
+
+```ini
+# pytest.ini
+log_cli=true
+log_level=DEBUG
+```
+
+```toml
+# pyproject.toml
+[tool.pytest.ini_options]
+log_cli="true"
+log_level="DEBUG"
+```
+
+[ref pytest docs](https://docs.pytest.org/en/7.1.x/reference/customize.html?highlight=configuration)
