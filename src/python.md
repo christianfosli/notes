@@ -61,3 +61,8 @@ log_level="DEBUG"
 ```
 
 [ref pytest docs](https://docs.pytest.org/en/7.1.x/reference/customize.html?highlight=configuration)
+
+## Interesting Python / JS Interop project
+
+[PythonMonkey](https://github.com/Distributive-Network/PythonMonkey)
+[Kode24 Article](https://www.kode24.no/artikkel/bygger-bro-mellom-javascript-og-python-med-pythonmonkey/81670827)
