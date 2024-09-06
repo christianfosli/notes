@@ -62,7 +62,35 @@ log_level="DEBUG"
 
 [ref pytest docs](https://docs.pytest.org/en/7.1.x/reference/customize.html?highlight=configuration)
 
+## Ruff
+
+* Format: `ruff format {file|dir}`
+
+* Lint: `ruff check [--fix] {file|dir}`
+
+* Organize imports: `ruff check --fix --select I`
+  or add to pyproject.toml:
+
+  ```toml
+  [tool.ruff.lint]
+  extend-select = ["I"]
+  ```
+
+* Example config:
+
+  ```toml
+  [tool.ruff]
+  line-length = 120
+
+  [tool.ruff.lint]
+  extend-select = ["I"]
+
+  [tool.ruff.lint.isort]
+  known-first-party = ["myorg_*"]
+  ```
+
 ## Interesting Python / JS Interop project
 
 [PythonMonkey](https://github.com/Distributive-Network/PythonMonkey)
 [Kode24 Article](https://www.kode24.no/artikkel/bygger-bro-mellom-javascript-og-python-med-pythonmonkey/81670827)
+
