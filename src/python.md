@@ -2,6 +2,13 @@
 
 ## Managing multiple python versions and dependencies
 
+**TODO**
+
+Consider managing python environments with [**uv**](https://github.com/astral-sh/uv) instead.
+It supports managing venv's, global python installations, tools (similar to pipx), etc
+
+---
+
 * Install multiple python versions with system package manager (e.g. dnf:
   [developer.fedoraproject.org/tech/languages/python/multiple-pythons](https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html))
 
