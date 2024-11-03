@@ -22,6 +22,8 @@ Open help-page: `git help command`
 
     * Check message and diff of commit: `git show <commit-hash>`
 
+      * Include commit (as well as author) date: `git show --format=fuller <commit-hash>`
+
     * Check diff for a merge commit:
 
       * Given this commit:
