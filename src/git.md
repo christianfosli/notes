@@ -117,3 +117,10 @@ Open help-page: `git help command`
   * Search by commit message: `git log --grep <regexp>`
 
   * Search by patch text (i.e. diff content): `git log -G <regexp>`
+
+
+---
+
+## GitHub tips and tricks
+
+* Clear cache, if using GitHub Actions cache (e.g. for docker build): `gh cache delete --all --repo {org}/{repo}`
