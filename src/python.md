@@ -1,43 +1,91 @@
 # Python Quick-Ref
 
-## Managing multiple python versions and dependencies
+## Managing python versions, environments and dependencies
 
-**TODO**
+**Use uv!**
 
-Consider managing python environments with [**uv**](https://github.com/astral-sh/uv) instead.
-It supports managing venv's, global python installations, tools (similar to pipx), etc
+### "uv-first" projects
 
----
 
-* Install multiple python versions with system package manager (e.g. dnf:
-  [developer.fedoraproject.org/tech/languages/python/multiple-pythons](https://developer.fedoraproject.org/tech/languages/python/multiple-pythons.html))
-
-* Use venv to separate project dependencies from system python dependencies:
+* Initialize project and create venv
 
   ```sh
-  python -m venv venv
-  . ./venv/bin/activate
-  # pip install away
+  uv init {project_name}
   ```
 
-  Or with an older version of python:
+* Add dep
 
   ```sh
-  python3.11 -m venv venv
-  . ./venv/bin/activate
-  # pip install away
+  uv add {dep}[version_constraint]
   ```
 
-* [More info about venv's](https://realpython.com/python-virtual-environments-a-primer/)
-
-## Pip upgrades
-
-1. Update version constraints in requirements.txt
-
-2.
+* Remove dep
 
   ```sh
-  pip install --upgrade -r requirements.txt
+  uv remove {dep}
+  ```
+
+* Upgrade dep
+
+  ```sh
+  uv lock --upgrade-package {dep}
+  ```
+
+### "pip-first" projects
+
+* Initialize venv
+
+  ```sh
+  uv venv --python 3.12
+  . .venv/bin/activate
+  ```
+
+  * If relying on internal packages using Azure DevOps Artifacts,
+    the UV_EXTRA_INDEX_URL env variable can be used to configure this.
+    A personal access token can be included in the URL for basic auth
+    (see uv docs for details).
+
+    For my current (2024) project I'm adjusting the venv activate script
+    to set this environment variable when activating venv,
+    and unset it in the deactivate function.
+    It is also possible to add the index url to pyproject.toml,
+    but then authorization must be handled differently, e.g. with artifacts-keyring
+    (obviously don't check your PAT into git).
+
+* Add dep
+
+  ```sh
+  uv pip install {dep}
+  ```
+
+  Or add it to requirements.txt and
+  
+  ```sh
+  uv pip install -r requirements.txt
+  ```
+
+  Or add it to pyproject.toml dependencies and
+
+  ```sh
+  uv pip install -e .
+  ```
+
+* Remove dep
+
+  ```sh
+  uv pip uninstall {dep}
+  ```
+
+* Upgrade dep
+
+  ```sh
+  uv pip install -U {dep}
+  ```
+
+  Or update version constraints in requirements.txt if needed and
+
+  ```sh
+  uv pip install -U -r requirements.txt
   ```
 
 ## Convenient cli's
@@ -95,6 +143,15 @@ log_level="DEBUG"
   [tool.ruff.lint.isort]
   known-first-party = ["myorg_*"]
   ```
+
+## BasedPyright
+
+A fork of the Pyright LSP with various feature improvements, such as code action for
+missing imports!
+
+Works nicely with terminal editors like Helix.
+
+See https://docs.basedpyright.com/latest/
 
 ## Interesting Python / JS Interop project
 
