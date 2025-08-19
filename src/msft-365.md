@@ -1,13 +1,5 @@
 # Microsoft 365 related notes
 
-### Roadmap items I'm interested in
-
-* [Teams: New meeting experience on web](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=92928)
-
-* [Outlook: Work hours and location](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=88822)
-
-* [Teams PWA](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/microsoft-teams-progressive-web-app-now-available-on-linux/ba-p/3669846)
-
 ### MS Teams keyboard shortcuts
 
 * Focus on search field: Ctrl-E
