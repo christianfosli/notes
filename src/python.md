@@ -7,10 +7,22 @@
 ### "uv-first" projects
 
 
-* Initialize project and create venv
+* Initialize new project
 
   ```sh
   uv init {project_name}
+  ```
+
+* Initialize existing project and install deps
+
+  ```sh
+  uv sync
+  ```
+
+* Install and update existing deps
+
+  ```sh
+  uv sync --upgrade
   ```
 
 * Add dep
@@ -30,6 +42,13 @@
   ```sh
   uv lock --upgrade-package {dep}
   ```
+
+### uv-first scripts
+
+```sh
+uv add --script example.py pandas  # Legger til kommentar på toppen av filen
+uv run example.py
+```
 
 ### "pip-first" projects
 
