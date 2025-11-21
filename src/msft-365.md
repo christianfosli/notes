@@ -15,3 +15,7 @@
 ### Work-arounds / hacks
 
 * [Workaround to fix Microsoft Edge based Web Apps not having there own icon when Wayland is enabled](https://forum.manjaro.org/t/workaround-to-fix-microsoft-edge-based-web-apps-not-having-there-own-icon-when-wayland-is-enabled/127224)
+
+### Misc
+
+* Update Microsoft Defender policies/definitions on Linux: `mdatp definitions update`
