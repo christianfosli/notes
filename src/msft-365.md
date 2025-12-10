@@ -19,3 +19,5 @@
 ### Misc
 
 * Update Microsoft Defender policies/definitions on Linux: `mdatp definitions update`
+
+* Check Microsoft Defender health: `mdatp health`
