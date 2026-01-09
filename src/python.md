@@ -50,61 +50,15 @@ uv add --script example.py pandas  # Legger til kommentar på toppen av filen
 uv run example.py
 ```
 
-### "pip-first" projects
+## Debugging and troubleshooting
 
-* Initialize venv
+* Debugging pandas dataframes and series, plot pd.Series:
 
-  ```sh
-  uv venv --python 3.12
-  . .venv/bin/activate
-  ```
-
-  * If relying on internal packages using Azure DevOps Artifacts,
-    the UV_EXTRA_INDEX_URL env variable can be used to configure this.
-    A personal access token can be included in the URL for basic auth
-    (see uv docs for details).
-
-    For my current (2024) project I'm adjusting the venv activate script
-    to set this environment variable when activating venv,
-    and unset it in the deactivate function.
-    It is also possible to add the index url to pyproject.toml,
-    but then authorization must be handled differently, e.g. with artifacts-keyring
-    (obviously don't check your PAT into git).
-
-* Add dep
-
-  ```sh
-  uv pip install {dep}
-  ```
-
-  Or add it to requirements.txt and
-  
-  ```sh
-  uv pip install -r requirements.txt
-  ```
-
-  Or add it to pyproject.toml dependencies and
-
-  ```sh
-  uv pip install -e .
-  ```
-
-* Remove dep
-
-  ```sh
-  uv pip uninstall {dep}
-  ```
-
-* Upgrade dep
-
-  ```sh
-  uv pip install -U {dep}
-  ```
-
-  Or update version constraints in requirements.txt if needed and
-
-  ```sh
-  uv pip install -U -r requirements.txt
+  ```python
+  breakpoint()  # Stop execution and enter debugger. Enter the remaining into debug console at the right time
+  import matplotlib.pyplot as plt
+  df.plot()
+  plt.show()  # plot appears
   ```
 
 ## Convenient cli's
