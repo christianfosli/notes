@@ -50,6 +50,9 @@ Open help-page: `git help command`
 
   * Restore file to branch `git restore -s <branchname> <filename>`
 
+  * Rewrite history  `git history {reword | split} <commit>` or
+    `git commit --{fixup | squash} <commit> && git rebase -i <base-ref>`
+
 * Misc
 
   * Does origin/master have new commits? (commits not reachable from HEAD)
@@ -84,12 +87,6 @@ Open help-page: `git help command`
   * Delete every branch except master `git branch | grep -v "master" | xargs git branch -D`
 
   * Reset branch to earlier commit / branch / tag `git reset --hard <commit>`
-
-  * Clean up latest n commits (opens interactive rebase editor letting you squash, pick, fixup, reorder)
-
-     `git rebase -i HEAD~n`
-
-  * Rebase _and_ update intermediate "feature branches" `git rebase --update-refs`
 
 * Remotes
 
