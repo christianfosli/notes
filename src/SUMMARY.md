@@ -16,7 +16,11 @@
 
 - [Microsoft 365](./msft-365.md)
 
+- [Plants](./plants.md)
+
 - [Python](./python.md)
+
+- [Smart Home](./smarthome.md)
 
 - [Vim \& Helix](./vim-helix.md)
 
