@@ -2,6 +2,8 @@
 
 [Introduction](README.md)
 
+# Tech stuff
+
 - [Bash \& Linux](./bash-linux.md)
 
 - [Curl](./curl.md)
@@ -16,12 +18,19 @@
 
 - [Microsoft 365](./msft-365.md)
 
-- [Plants](./plants.md)
-
 - [Python](./python.md)
-
-- [Smart Home](./smarthome.md)
 
 - [Vim \& Helix](./vim-helix.md)
 
 - [Web](./web.md)
+
+# Personal stuff
+
+- [Bike](./bike.md)
+
+- [Misc Products](./misc_products.md)
+
+- [Plants](./plants.md)
+
+- [Smart Home](./smarthome.md)
+

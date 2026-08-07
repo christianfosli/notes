@@ -6,7 +6,7 @@
 
 * Focus on search field for command: Ctrl-/
 
-* Switch chats: Alt-<Arrow Keys>
+* Switch chats: Alt-`<Arrow Keys>`
 
 * Switch sidebar tabs: Ctrl-1/2/3/4.. (web Ctrl-Shift-1/2/3/4..)
 
