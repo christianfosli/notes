@@ -22,6 +22,8 @@
 
 - [Vim \& Helix](./vim-helix.md)
 
+- [Vivaldi](./vivaldi.md)
+
 - [Web](./web.md)
 
 # Personal stuff
