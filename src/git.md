@@ -50,7 +50,7 @@ Open help-page: `git help command`
 
   * Restore file to branch `git restore -s <branchname> <filename>`
 
-  * Rewrite history  `git history {reword | split} <commit>` or
+  * Rewrite history  `git history {fixup | reword | drop | split} <commit>` or
     `git commit --{fixup | squash} <commit> && git rebase -i <base-ref>`
 
 * Misc
@@ -85,6 +85,8 @@ Open help-page: `git help command`
                           force delete with `git branch -D <branch>`
 
   * Delete every branch except master `git branch | grep -v "master" | xargs git branch -D`
+
+  * Delete merged branches `git branch --delete-merged [<pattern>] [--dry-run]`
 
   * Reset branch to earlier commit / branch / tag `git reset --hard <commit>`
 
